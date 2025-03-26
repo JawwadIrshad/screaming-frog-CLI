@@ -1,0 +1,108 @@
+<!-- Screaming Frog Automation and PageSpeed Insights Data Extraction -->
+
+This repository contains Python scripts to automate web crawling using Screaming Frog SEO Spider CLI and extract Core Web Vitals data using Google PageSpeed Insights API. The collected data is processed and stored in Google Sheets or Excel files.
+
+<!-- Features -->
+
+Screaming Frog Automation
+
+Crawls multiple URLs from a CSV file.
+
+Saves the crawl results as CSV files.
+
+Combines the exported data into an Excel file.
+
+Logs all operations for debugging and tracking.
+
+Google PageSpeed Insights Extraction
+
+Fetches performance metrics (Core Web Vitals) for mobile and desktop.
+
+Appends the data dynamically to a Google Sheet.
+
+Logs errors and status messages for troubleshooting.
+
+Requirements
+
+General Requirements
+
+Python 3.x
+
+Screaming Frog SEO Spider (installed on Windows)
+
+Google Cloud API Key for PageSpeed Insights
+
+Google Sheets API service account credentials
+
+Python Dependencies
+
+Install the required Python libraries using:
+
+pip install pandas openpyxl requests gspread oauth2client python-dotenv
+
+Setup
+
+Screaming Frog Automation
+
+Install Screaming Frog SEO Spider and ensure the CLI tool is available at:
+
+C:\Program Files\Screaming Frog SEO Spider\screamingfrogseospidercli.exe
+
+Edit screaming_frog_automation.py to update paths:
+
+Set current_directory, urls_file, output_folder, and logs_folder.
+
+Place a CSV file (urls.csv) with a column named URL containing the target URLs.
+
+Run the script:
+
+python screaming_frog_automation.py
+
+The results will be saved in the output folder and compiled into an Excel file.
+
+Google PageSpeed Insights Extraction
+
+Enable the PageSpeed Insights API in Google Cloud Console and generate an API key.
+
+Store the API key in a .env file:
+
+GOOGLE_CLOUD_API_KEY=your_api_key_here
+
+Create a Google Sheets API service account and download the credentials JSON file.
+
+Rename the credentials file to service_account_credentials.json and place it in the project directory.
+
+Edit pagespeed_metrics.py and update:
+
+SPREADSHEET_ID with your Google Sheet ID.
+
+WORKSHEET_NAME with the target worksheet.
+
+Run the script:
+
+python pagespeed_metrics.py
+
+The results will be appended to the Google Sheet.
+
+Logging
+
+Logs are stored in the logs directory.
+
+Each script generates timestamped log files for tracking operations.
+
+Troubleshooting
+
+Ensure Screaming Frog SEO Spider is installed and its CLI path is correct.
+
+Check urls.csv for a valid URL column.
+
+Verify the Google API key and service account credentials.
+
+Run scripts with administrator privileges if permission errors occur.
+
+Author
+
+Developed for web automation and data extraction.
+
+Contact for improvements or bug reports.
+
