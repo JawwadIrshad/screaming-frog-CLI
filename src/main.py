@@ -131,8 +131,8 @@ def process_sheet(spreadsheet_id, worksheet_name):
 
 # Main execution
 if __name__ == "__main__":
-    SPREADSHEET_ID = "1NgSQbxgI4HWqOreNny2e_XxjlyLLXOTwzZ4vYrrSxuE"
-    WORKSHEET_NAME = "Copy of CWV Data Dump"
+    SPREADSHEET_ID = " "
+    WORKSHEET_NAME = ""
 
     logging.info("Script started.")
     try:
