@@ -4,6 +4,7 @@ import pandas as pd
 import logging
 from datetime import datetime
 
+
 # Configure paths and settings
 current_directory = "D:\\Screaming-Frog-Through-CLI"  # Your working directory
 urls_file = os.path.join(current_directory, "urls.csv")  # CSV file containing URLs to crawl
@@ -11,6 +12,7 @@ output_folder = os.path.join(current_directory, "output")  # Folder for Screamin
 logs_folder = os.path.join(current_directory, "logs")  # Folder for log files
 log_file = os.path.join(logs_folder, f"log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
 excel_file = os.path.join(current_directory, "screamingfrog_output.xlsx")  # Final Excel file
+
 
 # Correct Screaming Frog CLI executable path
 screaming_frog_cli = "C:\\Program Files\\Screaming Frog SEO Spider\\screamingfrogseospidercli.exe"
