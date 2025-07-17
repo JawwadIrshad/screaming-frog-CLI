@@ -15,8 +15,9 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
+
 # File paths
-input_file = "Copy_of_Top_500_Actors_and_Actresses.xlsx"  # Replace with your input file
+input_file = ""  # Replace with your input file
 output_file = "Actors_Actresses_Analysis.xlsx"  # Output file
 
 try:
